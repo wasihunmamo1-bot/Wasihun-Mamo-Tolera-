@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Wasihun Mamo Tolera — Chemical Engineer, MBA graduate and AMIR Materials Engineering master's student.">
+  <meta name="theme-color" content="#102a43">
+  <title>Wasihun Mamo Tolera | Engineering & Materials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#102a43;--blue:#176b87;--teal:#2a9d8f;--ink:#243b53;--muted:#627d98;--paper:#f5f8fa;--white:#fff;--line:#d9e2ec;--gold:#e9b44c}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,226,236,.8)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:Manrope,sans-serif;font-weight:800;color:var(--navy);letter-spacing:-.5px}.brand span{color:var(--teal)}
+    .navlinks{display:flex;gap:25px;font-size:13px;font-weight:700;color:var(--muted)}.navlinks a:hover{color:var(--teal)}
+    .menu{display:none;background:none;border:0;font-size:24px;color:var(--navy)}
+    .hero{background:linear-gradient(120deg,#102a43 0%,#164e63 58%,#176b87 100%);color:white;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:460px;height:460px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-120px;top:-180px;box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 90px rgba(255,255,255,.025)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.45fr .75fr;gap:60px;align-items:center;padding:100px 0 105px}
+    .eyebrow{color:#9fe3d8;text-transform:uppercase;letter-spacing:2.5px;font-size:11px;font-weight:700}
+    h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.15}h1{font-size:clamp(42px,6vw,68px);letter-spacing:-2.5px;margin:18px 0 20px;max-width:720px}
+    .hero p{color:#d8e7ef;font-size:17px;max-width:640px;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:7px;font-size:13px;font-weight:700;border:1px solid transparent;transition:.2s}
+    .btn-primary{background:var(--teal);color:white}.btn-primary:hover{background:#23877b;transform:translateY(-2px)}
+    .btn-outline{border-color:rgba(255,255,255,.45);color:white}.btn-outline:hover{background:rgba(255,255,255,.1)}
+    .profile-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);padding:28px;border-radius:16px;backdrop-filter:blur(10px)}
+    .monogram{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#a6e5dc,#2a9d8f);color:var(--navy);font:800 25px Manrope;margin-bottom:23px}
+    .profile-card h3{font-size:19px;margin:0 0 6px}.profile-card p{font-size:13px;margin:0;color:#c5d9e5}.profile-line{height:1px;background:rgba(255,255,255,.2);margin:22px 0}.profile-meta{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#d8e7ef;margin:10px 0}.profile-meta strong{color:white}
+    section{padding:82px 0}.section-kicker{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--teal);font-weight:800}
+    h2{font-size:clamp(29px,4vw,40px);letter-spacing:-1.2px;color:var(--navy);margin:10px 0 15px}
+    .intro{max-width:690px;color:var(--muted);margin:0}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;margin-top:35px;align-items:start}
+    .about-copy p{color:var(--muted);margin-top:0}.focus-box{background:white;border:1px solid var(--line);border-radius:12px;padding:25px}
+    .focus-box h3{margin:0 0 15px;color:var(--navy);font-size:17px}.taglist{display:flex;flex-wrap:wrap;gap:9px}.tag{background:#edf7f6;color:#216e68;border:1px solid #d3eeea;border-radius:30px;padding:7px 11px;font-size:12px;font-weight:700}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}.stat{padding:18px;background:white;border:1px solid var(--line);border-radius:10px}.stat strong{display:block;color:var(--navy);font:800 24px Manrope}.stat span{font-size:11px;color:var(--muted)}
+    .alt{background:#edf3f6}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:32px}
+    .card{background:white;border:1px solid var(--line);border-radius:12px;padding:25px;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(16,42,67,.07)}
+    .card-top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.date{font-size:11px;color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:1px}
+    .card h3{font-size:18px;color:var(--navy);margin:9px 0}.card p{font-size:13px;color:var(--muted);margin:0}
+    .pill{font-size:10px;background:#f0f5f8;color:#486581;border-radius:20px;padding:6px 9px;white-space:nowrap;font-weight:700}
+    .research{background:var(--navy);color:white}.research h2{color:white}.research .intro{color:#c5d9e5}
+    .research-card{margin-top:30px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);padding:30px;border-radius:14px;max-width:850px}
+    .research-card h3{font-size:22px;margin:0 0 12px}.research-card p{color:#c5d9e5;font-size:14px}
+    .research-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.research-points div{border-left:2px solid var(--teal);padding-left:13px;font-size:12px;color:#d8e7ef}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.skill{background:white;border:1px solid var(--line);border-radius:10px;padding:21px}.skill h3{font-size:15px;color:var(--navy);margin:0 0 10px}.skill p{font-size:12px;color:var(--muted);margin:0}
+    .contact{background:#eaf2f5}.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:30px;background:white;border:1px solid var(--line);border-radius:15px;padding:35px}
+    .contact-inner h2{margin-top:7px}.contact-inner p{color:var(--muted);margin-bottom:0}.contact-note{font-size:12px;color:var(--muted);margin-top:16px}
+    footer{background:#0b2033;color:#b7c9d6;padding:25px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot strong{color:white}
+    @media(max-width:760px){.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:white;padding:18px 25px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr;gap:35px;padding:70px 0}.profile-card{max-width:430px}.about-grid{grid-template-columns:1fr;gap:25px}.cards{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}.research-points{grid-template-columns:1fr}.contact-inner{align-items:flex-start;flex-direction:column}section{padding:65px 0}}
+    @media(max-width:440px){.wrap{width:min(100% - 30px,1120px)}.stats{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr}.hero p{font-size:15px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home">WASIHUN<span>.</span></a>
+      <button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Engineering · Materials · Sustainability</div>
+        <h1>Wasihun Mamo Tolera</h1>
+        <p>Chemical Engineer, MBA graduate and master's student in Materials Engineering. I am interested in turning industrial challenges into practical, resource-efficient solutions.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about">Explore my profile</a>
+          <a class="btn btn-outline" href="#contact">Get in touch</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/wasihun-tolera-b06959143" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="monogram">WT</div>
+        <h3>Materials & Process Engineering</h3>
+        <p>Focused on recycling, circularity and sustainable industrial processes.</p>
+        <div class="profile-line"></div>
+        <div class="profile-meta"><span>Current programme</span><strong>AMIR MSc</strong></div>
+        <div class="profile-meta"><span>University</span><strong>University of Miskolc</strong></div>
+        <div class="profile-meta"><span>Based in</span><strong>Hungary</strong></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-kicker">About me</div>
+      <h2>Connecting engineering knowledge with real-world industry.</h2>
+      <p class="intro">My background combines chemical engineering, business administration and hands-on industrial experience.</p>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>I hold a bachelor's degree in Chemical Engineering and an MBA. My professional experience includes process-house operations in the sugar industry and utilities operations in the brewing industry.</p>
+          <p>I am currently pursuing a master's degree through the Advanced Materials Innovative Recycling (AMIR) programme. I want to deepen my knowledge of materials, recycling technologies and circular resource use, while building solutions that can work beyond the laboratory.</p>
+          <p>I value continuous learning, practical problem-solving, teamwork and responsible use of resources.</p>
+          <div class="stats">
+            <div class="stat"><strong>2</strong><span>Academic qualifications</span></div>
+            <div class="stat"><strong>2</strong><span>Industrial sectors</span></div>
+            <div class="stat"><strong>AMIR</strong><span>Master's programme</span></div>
+          </div>
+        </div>
+        <div class="focus-box">
+          <h3>Areas of interest</h3>
+          <div class="taglist">
+            <span class="tag">Materials Engineering</span><span class="tag">Industrial Recycling</span><span class="tag">Circular Economy</span><span class="tag">Process Engineering</span><span class="tag">Waste Valorization</span><span class="tag">Wastewater Treatment</span><span class="tag">Energy Efficiency</span><span class="tag">Sustainable Manufacturing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="education">
+    <div class="wrap">
+      <div class="section-kicker">Academic background</div>
+      <h2>Education</h2>
+      <p class="intro">A multidisciplinary foundation in engineering, management and advanced materials.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="date">2026–2028 · In progress</div>
+          <h3>MSc in Materials Engineering</h3>
+          <p><strong>Advanced Materials Innovative Recycling (AMIR)</strong><br>University of Miskolc, Hungary · EIT RawMaterials programme</p>
+          <p style="margin-top:12px">Focus: innovative recycling, materials engineering and circularity.</p>
+        </article>
+        <article class="card">
+          <div class="date">2023–2025</div>
+          <h3>Master of Business Administration (MBA)</h3>
+          <p>Yardstick International College</p>
+          <p style="margin-top:12px">Built a foundation in business, management and organizational decision-making.</p>
+        </article>
+        <article class="card">
+          <div class="date">2015–2019</div>
+          <h3>Bachelor of Science in Chemical Engineering</h3>
+          <p>Addis Ababa University · Addis Ababa Institute of Technology</p>
+          <p style="margin-top:12px">Foundation in chemical processes, process operations and engineering principles.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-kicker">Professional background</div>
+      <h2>Industrial experience</h2>
+      <p class="intro">Experience in process operations and utility systems across two major industrial environments.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-top"><div class="date">June 2025 – April 2026</div><span class="pill">Brewing industry</span></div>
+          <h3>Utilities Operator</h3>
+          <p><strong>Heineken Brewery S.C. · Harar, Ethiopia</strong></p>
+          <p style="margin-top:12px">Worked in an industrial utilities environment supporting brewery operations. Further details and measurable achievements can be added to this profile.</p>
+        </article>
+        <article class="card">
+          <div class="card-top"><div class="date">July 2022 – June 2025</div><span class="pill">Sugar industry</span></div>
+          <h3>Process House Supervisor</h3>
+          <p><strong>Metahara Sugar Factory · Ethiopia</strong></p>
+          <p style="margin-top:12px">Experience in sugar manufacturing process-house operations, with practical exposure to industrial process systems and production environments.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="research" id="research">
+    <div class="wrap">
+      <div class="section-kicker">Research interests</div>
+      <h2>Building a more circular industrial future.</h2>
+      <p class="intro">My current academic interests connect industrial by-products, resource recovery and sustainable treatment technologies.</p>
+      <div class="research-card">
+        <div class="date">Applied Chemistry · Research proposal</div>
+        <h3>Circular Valorization of Sugar Industry Filter Cake as a Low-Cost Adsorbent for Brewery Wastewater Treatment and Potential Agricultural Reuse</h3>
+        <p>This proposed study explores the potential use of sugar-industry filter cake as a low-cost adsorbent for treating brewery wastewater. It considers contaminant removal, material characterization and the safety of possible agricultural reuse.</p>
+        <div class="research-points">
+          <div><strong>Material</strong><br>Sugar-industry filter cake</div>
+          <div><strong>Application</strong><br>Brewery wastewater treatment</div>
+          <div><strong>Circularity</strong><br>By-product valorization and safe reuse</div>
+        </div>
+        <p style="font-size:11px;margin-top:22px;color:#9fb8c8">Research proposal in development; results and performance claims are not presented as established findings.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-kicker">Capabilities</div>
+      <h2>Knowledge and skills</h2>
+      <p class="intro">Areas developed through academic study and industrial practice.</p>
+      <div class="skills-grid">
+        <div class="skill"><h3>Process Engineering</h3><p>Industrial process operations, process understanding and production environments.</p></div>
+        <div class="skill"><h3>Materials & Recycling</h3><p>Materials engineering, recycling technologies and circular resource use.</p></div>
+        <div class="skill"><h3>Industrial Utilities</h3><p>Exposure to utility systems supporting continuous industrial operations.</p></div>
+        <div class="skill"><h3>Research</h3><p>Scientific literature, experimental planning and technical reporting.</p></div>
+        <div class="skill"><h3>Business & Management</h3><p>Business administration, coordination and management foundations.</p></div>
+        <div class="skill"><h3>Sustainability</h3><p>Waste valorization, resource efficiency and environmental responsibility.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-inner">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2>Let's connect.</h2>
+          <p>I'm open to meaningful conversations about materials engineering, recycling, research and industry.</p>
+          <div class="contact-note">Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/wasihun-tolera-b06959143" target="_blank" rel="noopener noreferrer" style="color:#176b87;font-weight:700">Wasihun Mamo Tolera ↗</a>. Add your email address when you are ready.</div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/wasihun-tolera-b06959143" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+          <a class="btn btn-outline" style="color:#176b87;border-color:#b8cbd5" href="mailto:YOUR-EMAIL@example.com">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot"><span>© <span id="year"></span> <strong>Wasihun Mamo Tolera</strong></span><span>Engineering · Materials · Sustainability</span></div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('open')));</script>
+</body>
+</html>
